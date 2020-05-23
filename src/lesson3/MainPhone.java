@@ -21,9 +21,15 @@ public class MainPhone {
     public void get(String name) {
         ArrayList<String> phones = phoneBookMap.get(name);
         System.out.print(name + ": ");
-        for (String value : phones) {
-            System.out.print( value + "; ");
+        if (phones != null) {
+            for (String value : phones) {
+                System.out.print(value + "; ");
+            }
         }
+        else {
+            System.out.println("Нет записей");
+        }
+        System.out.println();
     }
 
     public static void main(String[] argv) {
@@ -36,6 +42,8 @@ public class MainPhone {
         phonebook.add("Петров", "+79215555555");
 
         phonebook.get("Петров");
+        phonebook.get("Сидоров");
+        phonebook.get("Гендальф");
 
     }
 }
