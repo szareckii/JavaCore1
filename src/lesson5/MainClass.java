@@ -1,6 +1,7 @@
 package lesson5;
 
 public class MainClass {
+
     static class MyRunnableClass implements Runnable {
         private String nameThread;
 
